@@ -80,3 +80,31 @@
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: white;
 }
+
+.musicTxt {
+  color: white;
+  font-size: 4vw;
+  font-family: sans-serif;
+}
+
+.kepContainer {
+    position: relative;
+}
+
+.szovegKozep {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.playBtnDiv {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+}
+
+.playBtn {
+  height: 8vw;
+}
