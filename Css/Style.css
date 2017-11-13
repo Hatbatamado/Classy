@@ -170,3 +170,33 @@
   margin-right: 10%;
   margin-top: 5%;
 }
+
+.birdSalesBox {
+  height: 5vw;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birdSalesTxt {
+  color: #FFFFFF;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.5vw;
+}
+
+.emailInput2 {
+  border-width: 0px;
+  border-color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.81);
+  color: rgb(255,255,255);
+  font: normal normal normal 17px/21px avenir-lt-w01_35-light1475496,sans-serif;
+  padding-left: 10px;
+  width: 50%;
+  height: 30px;
+}
+
+.emailInputBtn2 {
+  width: 15%;
+}
