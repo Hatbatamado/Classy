@@ -109,10 +109,11 @@
   height: 8vw;
 }
 
-.features {
+.arnyek {
   background-image: url(../Content/images/features.png);
   background-repeat: repeat-x;
   background-position: 0 0;
+  margin-top: -2px;
 }
 
 .featuresContainer {
@@ -142,6 +143,30 @@
   padding-left: 15px;
 }
 
-.classyHr {
-  border-top: 1px solid #BDBDBD;
+.divBorder {
+  border-top: 1px solid #EEEEEE;
+}
+
+.partsContainer {
+  padding-top: 8vw;
+}
+
+.partsLine {
+  border-bottom: 4px solid rgba(35, 35, 35, 1);
+  height: 0 !important;
+  min-height: 0 !important;
+  width: 10%;
+  display: block;
+  margin: auto;
+}
+
+.partsP {
+  font-size: 0.9vw;
+  text-align: justify;
+}
+
+.partsPContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
 }
