@@ -20,10 +20,6 @@ $(document).ready(function () {
     e.preventDefault();
   });
 
-  $("#pressSubmit").on('click', function() {
-    $("#pressForm").submit();
-  });
-
   $("#contactForm").on("submit", function(e) {
     var postData = $(this).serializeArray();
     var formURL = $(this).attr("action");
@@ -41,7 +37,71 @@ $(document).ready(function () {
     e.preventDefault();
   });
 
-  $("#contactSubmit").on('click', function() {
-    $("#contactForm").submit();
+  $("#salesForm").on("submit", function(e) {
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url: formURL,
+        type: "POST",
+        data: postData,
+        success: function(data, textStatus, jqXHR) {
+          alert(data);
+        },
+        error: function(jqXHR, status, error) {
+          console.log(status + ": " + error);
+        }
+    });
+    e.preventDefault();
+  });
+
+  $("#keepMeUpdatedFooterForm").on("submit", function(e) {
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url: formURL,
+        type: "POST",
+        data: postData,
+        success: function(data, textStatus, jqXHR) {
+          alert(data);
+        },
+        error: function(jqXHR, status, error) {
+          console.log(status + ": " + error);
+        }
+    });
+    e.preventDefault();
+  });
+
+  $("#birdSalesForm").on("submit", function(e) {
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url: formURL,
+        type: "POST",
+        data: postData,
+        success: function(data, textStatus, jqXHR) {
+          alert(data);
+        },
+        error: function(jqXHR, status, error) {
+          console.log(status + ": " + error);
+        }
+    });
+    e.preventDefault();
+  });
+
+  $("#keepMeUpdatedTopForm").on("submit", function(e) {
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url: formURL,
+        type: "POST",
+        data: postData,
+        success: function(data, textStatus, jqXHR) {
+          alert(data);
+        },
+        error: function(jqXHR, status, error) {
+          console.log(status + ": " + error);
+        }
+    });
+    e.preventDefault();
   });
 });

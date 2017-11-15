@@ -28,7 +28,7 @@
         </div>
         <div style="position: unset">
           <img src="./Content/images/bg1.jpg" class="img-responsive bgKep1" alt="bg1">
-          <form method="post" action="keepMeUpdated.php" class="subscribe">
+          <form method="post" id="keepMeUpdatedTopForm" action="./controllers/subscribe.php" class="subscribe">
             <input placeholder="Valid Email Address" type="email" name="email" class="emailInput" required>
             <button type="submit" class="btn pull-center emailInputBtn"><span style="font-size:1vw;">KEEP ME UPDATED</span></button>
           </form>
@@ -130,7 +130,7 @@
       </div>
     </div>
     <div class="row" style="margin-top:2vw;">
-      <form method="post" action="keepMeUpdated.php" class="text-center">
+      <form method="post" id="birdSalesForm" action="./controllers/subscribe.php" class="text-center">
         <input placeholder="Valid Email Address" name="email" type="email" class="emailInput2" required>
         <button type="submit" class="btn pull-center emailInputBtn2"><span style="font-size:1vw;">KEEP ME UPDATED</span></button>
       </form>
@@ -213,7 +213,7 @@
           </div>
         </div>
       </div>
-      <form method="post" action="keepMeUpdated.php" class="row" style="margin-top:2vw;">
+      <form method="post" id="keepMeUpdatedFooterForm" action="./controllers/subscribe.php" class="row" style="margin-top:2vw;">
         <input placeholder="Valid Email Address" name="email" type="email" class="emailInput3" required>
         <button type="submit" class="btn pull-center emailInputBtn3"><span style="font-size:1vw;">KEEP ME UPDATED</span></button>
       </form>
@@ -255,7 +255,7 @@
                 </div>
                 <div class="modal-footer" style="margin-top:2vw">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" id="pressSubmit" class="btn btn-default">Send</button>
+                  <button type="button" type="submit" class="btn btn-default">Send</button>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@
                 </div>
                 <div class="modal-footer" style="margin-top:2vw">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" id="contactSubmit" class="btn btn-default">Send</button>
+                  <button type="button" type="submit" class="btn btn-default">Send</button>
                 </div>
               </div>
             </div>
@@ -292,17 +292,22 @@
             <div class="popupBg col-xs-12">
               <div style="width: 70vw; padding-top:2vw; padding-bottom: 5vw;" class="text-center">
                 <div><span class="popupHeader">40% SUPER EARLY BIRD SAVING</span></div>
-                <hr style="width: 60%; border-top: 3px solid #eee;">
-                <div class="salesContainer">
-                  <p class="salesP">Be the first to have the sleek and highly functional Classy Horn and save 40% on our KickStarter campaign.</p>
-                  <p class="salesP">To receive this offer and exclusive updates Sign Up Below</p>
-                </div>
-                <form method="post" action="keepMeUpdated.php" style="margin-top:5vw;">
-                  <div class="text-center">
-                    <input type="email" placeholder="Valid Email Address" name="email" class="emailInput2" required>
-                    <button type="submit" class="btn pull-center emailInputBtn2"><span style="font-size:1vw;">SIGN UP</span></button>
+                <div class="modal-body">
+                  <hr style="width: 60%; border-top: 3px solid #eee;">
+                  <div class="salesContainer">
+                    <p class="salesP">Be the first to have the sleek and highly functional Classy Horn and save 40% on our KickStarter campaign.</p>
+                    <p class="salesP">To receive this offer and exclusive updates Sign Up Below</p>
                   </div>
-                </form>
+                  <form method="post" id="salesForm" action="./controllers/subscribe.php" style="margin-top:5vw;">
+                    <div class="text-center">
+                      <input type="email" placeholder="Valid Email Address" name="email" class="emailInput2" required>
+                      <button type="submit" class="btn pull-center emailInputBtn2"><span style="font-size:1vw;">SIGN UP</span></button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer" style="margin-top:2vw">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>
