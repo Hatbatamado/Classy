@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./formScripts.js"></script>
     <meta charset="utf-8" />
     <title>Classy Horn Kickstarter | Classy Sound | United States</title>
 </head>
@@ -240,19 +241,22 @@
             <div class="popupBg col-xs-12">
               <div style="width: 70vw; padding-top:2vw; padding-bottom: 5vw;" class="text-center">
                 <div style="margin-bottom:3vw;"><span class="popupHeader">CONTACT US</span></div>
-                <form method="post" action="contact.php">
-                  <div style="display:inline-grid">
-                    <div style="margin-bottom: 5px;"><input type="text" name="name" placeholder="NAME" required class="popupInput"></div>
-                    <div style="margin-bottom: 5px;"><input type="email" name="email" placeholder="EMAIL" required class="popupInput"></div>
-                    <div style="margin-bottom: 5px;"><input type="text" name="company" placeholder="COMPANY" required class="popupInput"></div>
-                  </div>
-                  <div style="display:inline-grid">
-                    <textarea name="message" placeholder="MESSAGE" required class="popupTextarea"></textarea>
-                  </div>
-                  <div style="margin-top:2vw">
-                    <button type="submit">Send</button>
-                  </div>
-                </form>
+                <div class="modal-body">
+                  <form method="post" id="pressForm" action="./controllers/contact.php">
+                    <div style="display:inline-grid">
+                      <div style="margin-bottom: 5px;"><input type="text" name="name" placeholder="NAME" required class="popupInput"></div>
+                      <div style="margin-bottom: 5px;"><input type="email" name="email" placeholder="EMAIL" required class="popupInput"></div>
+                      <div style="margin-bottom: 5px;"><input type="text" name="company" placeholder="COMPANY" required class="popupInput"></div>
+                    </div>
+                    <div style="display:inline-grid">
+                      <textarea name="message" placeholder="MESSAGE" required class="popupTextarea"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer" style="margin-top:2vw">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" id="pressSubmit" class="btn btn-default">Send</button>
+                </div>
               </div>
             </div>
           </div>
@@ -317,10 +321,5 @@
       </div>
     </div>
   </div>
-  <script>
-    $('body').on('hidden.bs.modal', '.modal', function () {
-    $('video').trigger('pause');
-    });
-  </script>
 </body>
 </html>

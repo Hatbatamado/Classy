@@ -277,3 +277,9 @@ video {
   width: 100%;
   height: auto;
 }
+
+.modal-footer {
+  padding: 0;
+  text-align: center;
+  border-top: 0px solid #e5e5e5;
+}
