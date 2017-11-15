@@ -11,9 +11,7 @@ $(document).ready(function () {
         type: "POST",
         data: postData,
         success: function(data, textStatus, jqXHR) {
-          //$('#pressModal .modal-body').html(data);
-          //$("#pressSubmit").remove();
-          alert(data)
+          alert(data);
         },
         error: function(jqXHR, status, error) {
           console.log(status + ": " + error);
@@ -24,5 +22,26 @@ $(document).ready(function () {
 
   $("#pressSubmit").on('click', function() {
     $("#pressForm").submit();
+  });
+
+  $("#contactForm").on("submit", function(e) {
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url: formURL,
+        type: "POST",
+        data: postData,
+        success: function(data, textStatus, jqXHR) {
+          alert(data);
+        },
+        error: function(jqXHR, status, error) {
+          console.log(status + ": " + error);
+        }
+    });
+    e.preventDefault();
+  });
+
+  $("#contactSubmit").on('click', function() {
+    $("#contactForm").submit();
   });
 });
