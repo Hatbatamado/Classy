@@ -1,11 +1,8 @@
 <?php
-if(isset($_POST['email'])) {
-
+if (isset($_POST['email'])) {
 	// CHANGE THE TWO LINES BELOW
-	$email_to = "gyula@classysound.com"
-
+	$email_to = "email@email.com"
 	$email_subject = "http://www.classysound.com";
-
 
 	function died($error) {
 		// your error code can go here
@@ -16,9 +13,7 @@ if(isset($_POST['email'])) {
 	}
 
 	// validation expected data exists
-	if(!isset($_POST['name']) ||
-		!isset($_POST['email']) ||
-		!isset($_POST['message'])) {
+	if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['message'])) {
 		died('We are sorry, but there appears to be a problem with the form you submitted.');
 	}
 
@@ -29,19 +24,25 @@ if(isset($_POST['email'])) {
 
 	$error_message = "";
 	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-  if(!preg_match($email_exp,$email_from)) {
+
+  if (!preg_match($email_exp,$email_from)) {
   	$error_message .= 'The Email Address you entered does not appear to be valid.';
   }
+
 	$string_exp = "/^[A-Za-z .'-]+$/";
-  if(!preg_match($string_exp,$name)) {
+
+  if (!preg_match($string_exp,$name)) {
   	$error_message .= 'The Name you entered does not appear to be valid.';
   }
-  if(strlen($message) < 2) {
+
+  if (strlen($message) < 2) {
   	$error_message .= 'The Message you entered do not appear to be valid.';
   }
-  if(strlen($error_message) > 0) {
+
+  if (strlen($error_message) > 0) {
   	died($error_message);
   }
+
 	$email_message = "Form details below.\n\n";
 
 	function clean_string($string) {
@@ -53,7 +54,6 @@ if(isset($_POST['email'])) {
 	$email_message .= "Email: ".clean_string($email_from)."\n";
 	$email_message .= "Company: ".clean_string($company)."\n";
 	$email_message .= "Message: ".clean_string($message)."\n";
-
 
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
